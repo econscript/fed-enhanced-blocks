@@ -1,6 +1,6 @@
 # Fed Enhanced Blocks
 
-A WordPress plugin that addresses two pain points for data-driven, visual-storytelling sites:
+A WordPress plugin that adds some enhanced functionality
 
 1. **Captions for featured images and Media & Text blocks.** Manage captions in the editor, rendered automatically on the front end.
 2. **An enhanced Data Table block** with sorting, filtering, advanced styling, and mobile-responsive layouts.
@@ -14,7 +14,7 @@ A WordPress plugin that addresses two pain points for data-driven, visual-storyt
 ## Installation
 
 1. Drop the `fed-enhanced-blocks` folder into `wp-content/plugins/`, or upload the zip via **Plugins → Add New → Upload Plugin**.
-2. Activate **Fed Enhanced Blocks** from the Plugins screen.
+2. Activate **Fed Enhanced Blocks** via code: https://docs.wpvip.com/plugins/activate-plugins-through-code/
 3. No further configuration is required.
 
 ## Features
@@ -42,7 +42,7 @@ add_filter( 'feb_featured_caption_post_types', function ( $types ) {
 
 ### 3. Data Table (Enhanced) block
 
-In the inserter, search for **Data Table (Enhanced)**.
+In the block selector while editing content, search for **Data Table (Enhanced)**.
 
 Inspector controls:
 
@@ -85,7 +85,3 @@ This is a working baseline. Reasonable production hardening would include:
 - Conditional formatting (e.g., color cells based on numeric thresholds — useful for financial data).
 - A `has_block()` check before enqueuing front-end CSS, to avoid loading on pages that don't use the block.
 - Theme-aware default colors that pull from the active theme's palette via `theme.json`.
-
-## License
-
-GPL-2.0-or-later.
