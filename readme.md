@@ -13,7 +13,7 @@ A WordPress plugin that adds some enhanced functionality
 
 ## Installation
 
-1. Drop the `fed-enhanced-blocks` folder into `wp-content/plugins/`, or upload the zip via **Plugins → Add New → Upload Plugin**.
+1. Drop the `fed-enhanced-blocks` folder into `wp-content/plugins/`
 2. Activate **Fed Enhanced Blocks** via code: https://docs.wpvip.com/plugins/activate-plugins-through-code/
 3. No further configuration is required.
 
