@@ -1,0 +1,140 @@
+/* =========================================================================
+   Fed Enhanced Blocks — front-end styles
+   ========================================================================= */
+
+/* --- Featured image caption ----------------------------------------------- */
+.feb-featured-figure {
+	margin: 0 0 1.25rem;
+}
+
+.feb-featured-caption {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #4b5563;
+	margin-top: 0.5rem;
+	font-style: italic;
+}
+
+/* --- Media & Text caption ------------------------------------------------- */
+.feb-media-text-caption {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #4b5563;
+	margin-top: 0.5rem;
+	font-style: italic;
+}
+
+/* =========================================================================
+   Data table block
+   ========================================================================= */
+
+.feb-data-table-wrap {
+	--feb-header-bg:    #0a3161;
+	--feb-header-color: #ffffff;
+	--feb-stripe-color: #f5f7fa;
+	--feb-border-color: #d1d5db;
+	margin: 1.5rem 0;
+}
+
+.feb-data-table-scroll {
+	width: 100%;
+}
+
+.feb-data-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+	background: #fff;
+}
+
+.feb-data-table.is-bordered th,
+.feb-data-table.is-bordered td {
+	border: 1px solid var(--feb-border-color);
+}
+
+.feb-data-table thead th {
+	background: var(--feb-header-bg);
+	color: var(--feb-header-color);
+	text-align: left;
+	padding: 0.75rem 0.85rem;
+	font-weight: 600;
+	user-select: none;
+	position: relative;
+}
+
+.feb-data-table tbody td {
+	padding: 0.65rem 0.85rem;
+	color: #1f2937;
+	vertical-align: top;
+}
+
+.feb-data-table.is-striped tbody tr:nth-child(even) td {
+	background: var(--feb-stripe-color);
+}
+
+.feb-data-table-caption {
+	caption-side: top;
+	text-align: left;
+	padding-bottom: 0.5rem;
+	font-weight: 600;
+	color: #111827;
+}
+
+/* --- Mobile: horizontal scroll mode -------------------------------------- */
+.feb-data-table-wrap.mobile-scroll .feb-data-table-scroll {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* --- Mobile: stacked-card mode (default) --------------------------------- */
+@media (max-width: 640px) {
+	.feb-data-table-wrap.mobile-stack .feb-data-table thead {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table,
+	.feb-data-table-wrap.mobile-stack .feb-data-table tbody,
+	.feb-data-table-wrap.mobile-stack .feb-data-table tr,
+	.feb-data-table-wrap.mobile-stack .feb-data-table td {
+		display: block;
+		width: 100%;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table tr {
+		border: 1px solid var(--feb-border-color);
+		border-radius: 6px;
+		margin-bottom: 0.75rem;
+		padding: 0.25rem 0;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table.is-striped tbody tr:nth-child(even) td {
+		background: transparent;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table td {
+		border: 0;
+		border-bottom: 1px solid var(--feb-border-color);
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.6rem 0.85rem;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table tr td:last-child {
+		border-bottom: 0;
+	}
+
+	.feb-data-table-wrap.mobile-stack .feb-data-table td::before {
+		content: attr(data-label);
+		font-weight: 600;
+		color: #374151;
+		flex: 0 0 40%;
+	}
+}
